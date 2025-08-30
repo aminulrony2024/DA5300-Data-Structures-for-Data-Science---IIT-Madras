@@ -16,6 +16,14 @@ class LinkedList:
             last = last.next
         last.next = new_node
     
+    def prepend(self,data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        new_node.next = self.head
+        self.head = new_node
+
     def print_ll(self):
         temp = self.head
         while temp:
@@ -33,5 +41,16 @@ for i in range(x):
     ll.append(x)
 
 print("The element's of the linked list are : ")
+
+ll.print_ll()
+
+print("Now, append an element in front of the linked list : ")
+
+print("Enter the element : ")
+x = int(input())
+
+ll.prepend(x)
+
+print("Linked list after adding the element in front of the linked list : ")
 
 ll.print_ll()

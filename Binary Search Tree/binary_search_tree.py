@@ -39,5 +39,11 @@ for i in range(x):
     data = int(input("\nEnter the value of the node : "))
     bt.root = bt.Insert(bt.root,data)
 
-print("In Order Traversal of the binary tree : ")
+print("Pre Order Traversal of the binary tree : ")
+bt.preOrderTrav(bt.root)
+
+print("\nIn Order Traversal of the binary tree : ")
 bt.inOrderTrav(bt.root)
+
+print("\nPost Order Traversal of the binary tree : ")
+bt.postOrderTrav(bt.root)
